@@ -1,0 +1,74 @@
+{
+    "url": {
+        "http": "http://localhost.controlefinanceiro.com.br",
+        "https": "http://localhost.controlefinanceiro.com.br"
+    },
+    "database": {
+        "application": {
+            "host": "localhost",
+            "schema": "dev_gestorfox",
+            "user": "root",
+            "password": "",
+            "port": "3306",
+            "charset": "utf8"
+        },
+        "standard": {
+            "host": "localhost",
+            "schema": "dev_gestorfox",
+            "user": "root",
+            "password": "",
+            "port": "3306",
+            "charset": "utf8"
+        }
+    },
+    "plugin": {
+        "smarty": {
+            "debugging": false,
+            "caching": true,
+            "force_compile": false,
+            "cache_lifetime": 86400,
+            "date": "%d/%m/%Y",
+            "time": "%H:%M"
+        },
+        "wkhtmltopdf": {
+            "command": "/usr/local/bin/wkhtmltopdf -O Portrait {data:origin} {data:destiny}"
+        }
+    },
+    "template": {
+        "default": "template/foxbootstrap"
+    },
+    "standard": {
+        "total_line_table": "10",
+        "companyname": "INDUSTRIA FOX",
+        "applicationname": "GESTOR FOX",
+        "wkhtmltopdf": "/usr/local/bin/wkhtmltopdf"
+    },
+    "datetime": {
+        "input": {
+            "date": "Y-m-d",
+            "time": "H:i:s"
+        },
+        "output": {
+            "date": "d/m/Y",
+            "time": "H:i"
+        }
+    },
+    "environment": {
+        "local": "developer",
+        "timezone": "America/Sao_Paulo",
+        "language": "pt-BR",
+        "charset": "utf-8"
+    },
+    "page": {
+        "default": {
+            "public": "user/login",
+            "private": "navigation/home"
+        }
+    },
+    "contact": {
+        "suporte": {
+            "name": "Suporte Industria Fox",
+            "email": "suporte@industriafox.com"
+        }
+    }
+}
