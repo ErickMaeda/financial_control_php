@@ -22,7 +22,7 @@ $i = 1;
 
 $receitas = array();
 $despesas = array();
-$colluns = array();
+$dates = array();
 $receitas_dt = array();
 $despesas_dt = array();
 
@@ -30,6 +30,9 @@ while ($value = mysql_fetch_object($res)) {
     $tipo = $value->movimentacao_tipo;
     $date = $value->dt_movimentacao;
 
+    if(!in_array($date, $dates)){
+        $dates[] = $date;
+    }
     if ($tipo == "RF" || $tipo == 'RV') {     // receitas
         if (!in_array($date, $receitas_dt)) {
             $receitas_dt[] = $date;
@@ -55,6 +58,7 @@ $smarty->assign('despesasByDate', getTotalByDate($despesas_dt));
 
 $smarty->assign('first_dt', $data);
 $smarty->assign('second_dt', $data2);
+$smarty->assign('dates', $dates);
 
 $smarty->assign('despesas', $despesas);
 $smarty->assign('receitas', $receitas);

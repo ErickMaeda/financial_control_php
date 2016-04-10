@@ -8,6 +8,9 @@ function validaForm() {
     if ($('#year_start').val() > $('#year_final').val()) {
         errorText.push('ANO DE ENTRADA DEVE SER MENOR QUE O ANO FINAL!');
         stats = false;
+    } else if ($('#year_start').val() == $('#year_final').val() && $('#month_start').val() > $('#month_final').val()) {
+        errorText.push('MES DE ENTRADA DEVE SER MENOR QUE O MES FINAL!');
+        stats = false;
     }
 
     if ($('#month_start').val() === '' || $('#month_start').val() === '0') {

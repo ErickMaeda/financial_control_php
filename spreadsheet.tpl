@@ -118,31 +118,55 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">    
-                                <div class="panel-body " >
-                                    <div class="row col-lg-12">
-                                        <h2>EXPORTAR</h2>
-                                    </div>
-                                    <table class="table table-striped col-lg-12">
-                                        <tbody>
-                                            <tr>   
-                                                <td>GRAFICO: </td>
-                                                <td><a href="gera_grafico.php?data={$data}"><img src="storage/chart.png" style="width: 50px"></a></td>
-                                            </tr>
-                                            <tr>    
-                                                <td>PDF</td>
-                                                <td><a href="gera_pdf.php?data={$data}"><img src="storage/pdf.png" style="width: 50px"></a></td>
-                                            </tr>
-                                            <tr>    
-                                                <td>E-MAIL</td>
-                                                <td><a href="gera_email.php?data={$data}"><img src="storage/email.png" style="width: 50px"></a></td>
-                                            </tr>
-                                            <tr>    
-                                                <td>SALDO TOTAL</td>
-                                                <td><h2><b>{$receitas_total - $despesas_total}</b></h2></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>  
+                            {if ($colluns_despesa)}
+                                <div class="panel panel-default">    
+                                    <div class="panel-body " >
+                                        <div class="row col-lg-12">
+                                            <h2>EXPORTAR</h2>
+                                        </div>
+                                        <table class="table table-striped col-lg-12">
+                                            <thead>
+                                                <tr>
+                                                    <td>EXPORTAR PARA: </td>
+                                                    {foreach from=$colluns_despesa item="date"}
+                                                        <td><b>{$date|date_format:"%d/%m/%Y"}</b></td>
+                                                    {foreachelse}
+                                                        <td colspan="100%">Tabela Vazia</td>
+                                                    {/foreach}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>   
+                                                    <td>GRAFICO: </td>
+                                                    {foreach from=$colluns_despesa item="date"}
+                                                        <td><a target = '_blank' href="grafico.php?data={$date}"><img src="storage/chart.png" style="width: 50px"></a></td>
+                                                            {foreachelse}
+                                                        <td colspan="100%">------</td>
+                                                    {/foreach}
+                                                </tr>
+                                                <tr>    
+                                                    <td>PDF</td>
+                                                    {foreach from=$colluns_despesa item="date"}
+                                                        <td><a target = '_blank' href="gera_pdf.php?data={$date}"><img src="storage/pdf.png" style="width: 50px"></a></td>
+                                                            {foreachelse}
+                                                        <td colspan="100%">------</td>
+                                                    {/foreach}
+                                                </tr>
+                                                <tr>    
+                                                    <td>E-MAIL</td>
+                                                    {foreach from=$colluns_despesa item="date"}
+                                                        <td><a target = '_blank' href="gera_email.php?data={$date}"><img src="storage/email.png" style="width: 50px"></a></td>
+                                                            {foreachelse}
+                                                        <td colspan="100%">------</td>
+                                                    {/foreach}
+                                                </tr>
+                                                <tr>    
+                                                    <td>SALDO TOTAL</td>
+                                                    <td><h2><b>{$receitas_total - $despesas_total}</b></h2></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>  
+                                    {/if}
                                 </div>
                             </div>
                         </div>
