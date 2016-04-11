@@ -166,9 +166,9 @@
                                                 </tr>
                                             </tbody>
                                         </table>  
-                                    {/if}
-                                </div>
-                            </div>
+                                    </div>
+                                </div>                 
+                            {/if}
                         </div>
                     </div>
                 </div>

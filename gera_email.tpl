@@ -50,6 +50,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h2 type="text" id="errorText" name="errorText" class="text-danger">{$textError|default:''} </h2>
+                                            <h2 type="text" id="successText" name="successText" class="text-success">{$textSuccess|default:''} </h2>
                                         </div>
                                     </div>
                                 </div>

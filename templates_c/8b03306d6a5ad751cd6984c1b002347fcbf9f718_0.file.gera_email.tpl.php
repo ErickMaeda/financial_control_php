@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 16:30:28
+/* Smarty version 3.1.29, created on 2016-04-11 10:24:29
   from "/var/www/htdocs/financial_control_php/gera_email.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570aa9d4e72af1_33732271',
+  'unifunc' => 'content_570ba58dd9ca36_35142895',
   'file_dependency' => 
   array (
     '8b03306d6a5ad751cd6984c1b002347fcbf9f718' => 
     array (
       0 => '/var/www/htdocs/financial_control_php/gera_email.tpl',
-      1 => 1460316627,
+      1 => 1460381047,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:comom/footer.tpl' => 1,
   ),
 ),false)) {
-function content_570aa9d4e72af1_33732271 ($_smarty_tpl) {
+function content_570ba58dd9ca36_35142895 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +83,8 @@ function content_570aa9d4e72af1_33732271 ($_smarty_tpl) {
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h2 type="text" id="errorText" name="errorText" class="text-danger"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['textError']->value)===null||$tmp==='' ? '' : $tmp);?>
+ </h2>
+                                            <h2 type="text" id="successText" name="successText" class="text-success"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['textSuccess']->value)===null||$tmp==='' ? '' : $tmp);?>
  </h2>
                                         </div>
                                     </div>
