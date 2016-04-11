@@ -38,13 +38,13 @@
                                                     <td>{$linha->des_movimentacao}</td>
                                                     <td>{$linha->movimentacao_tipo}</td>
                                                     {foreach from=$colluns_receita item="collum"}
-                                                        <th>
+                                                        <td>
                                                             {if ($linha->dt_movimentacao==$collum)}
                                                                 {$linha->custo}
                                                             {else}
                                                                 -----
                                                             {/if}
-                                                        </th>
+                                                        </td>
                                                     {/foreach}
                                                 </tr>
 
@@ -56,9 +56,9 @@
                                                     <td>Total por data: </td>
                                                     <td>------</td>
                                                     {foreach from=$receitasByDate item="collum"}
-                                                        <th>
+                                                        <td>
                                                             {$collum|default:0}
-                                                        </th>
+                                                        </td>
                                                     {/foreach}
                                                 </tr>
                                                 <tr><td colspan="100%">Total de receitas: <b>{$receitas_total|default:0}</b></td></tr>                                                
@@ -89,13 +89,13 @@
                                                     <td>{$linha->des_movimentacao}</td>
                                                     <td>{$linha->movimentacao_tipo}</td>
                                                     {foreach from=$colluns_despesa item="collum"}
-                                                        <th>
+                                                        <td>
                                                             {if ($linha->dt_movimentacao==$collum)}
                                                                 {$linha->custo}
                                                             {else}
                                                                 -----
                                                             {/if}
-                                                        </th>
+                                                        </td>
                                                     {/foreach}
                                                 </tr>
                                             {foreachelse}
@@ -106,9 +106,9 @@
                                                     <td>Total por data: </td>
                                                     <td>------</td>
                                                     {foreach from=$despesasByDate item="collum"}
-                                                        <th>
+                                                        <td>
                                                             {$collum|default:0}
-                                                        </th>
+                                                        </td>
                                                     {/foreach}
                                                 </tr>
                                                 <tr><td colspan="100%">Total de receitas: <b>{$despesas_total|default:0}</b></td></tr>                                                

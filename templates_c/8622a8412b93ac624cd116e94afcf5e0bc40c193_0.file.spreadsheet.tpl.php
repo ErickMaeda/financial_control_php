@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 18:27:25
+/* Smarty version 3.1.29, created on 2016-04-11 07:37:57
   from "/var/www/htdocs/financial_control_php/spreadsheet.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ac53d375689_19567446',
+  'unifunc' => 'content_570b7e85b58681_68380978',
   'file_dependency' => 
   array (
     '8622a8412b93ac624cd116e94afcf5e0bc40c193' => 
     array (
       0 => '/var/www/htdocs/financial_control_php/spreadsheet.tpl',
-      1 => 1460323637,
+      1 => 1460371064,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:comom/footer.tpl' => 1,
   ),
 ),false)) {
-function content_570ac53d375689_19567446 ($_smarty_tpl) {
+function content_570b7e85b58681_68380978 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once '/var/www/htdocs/financial_control_php/vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
 ?>
 <!DOCTYPE html>
@@ -112,14 +112,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['collum']->value) {
 $_smarty_tpl->tpl_vars['collum']->_loop = true;
 $__foreach_collum_2_saved_local_item = $_smarty_tpl->tpl_vars['collum'];
 ?>
-                                                        <th>
+                                                        <td>
                                                             <?php if (($_smarty_tpl->tpl_vars['linha']->value->dt_movimentacao == $_smarty_tpl->tpl_vars['collum']->value)) {?>
                                                                 <?php echo $_smarty_tpl->tpl_vars['linha']->value->custo;?>
 
                                                             <?php } else { ?>
                                                                 -----
                                                             <?php }?>
-                                                        </th>
+                                                        </td>
                                                     <?php
 $_smarty_tpl->tpl_vars['collum'] = $__foreach_collum_2_saved_local_item;
 }
@@ -157,10 +157,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['collum']->value) {
 $_smarty_tpl->tpl_vars['collum']->_loop = true;
 $__foreach_collum_3_saved_local_item = $_smarty_tpl->tpl_vars['collum'];
 ?>
-                                                        <th>
+                                                        <td>
                                                             <?php echo (($tmp = @$_smarty_tpl->tpl_vars['collum']->value)===null||$tmp==='' ? 0 : $tmp);?>
 
-                                                        </th>
+                                                        </td>
                                                     <?php
 $_smarty_tpl->tpl_vars['collum'] = $__foreach_collum_3_saved_local_item;
 }
@@ -240,14 +240,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['collum']->value) {
 $_smarty_tpl->tpl_vars['collum']->_loop = true;
 $__foreach_collum_6_saved_local_item = $_smarty_tpl->tpl_vars['collum'];
 ?>
-                                                        <th>
+                                                        <td>
                                                             <?php if (($_smarty_tpl->tpl_vars['linha']->value->dt_movimentacao == $_smarty_tpl->tpl_vars['collum']->value)) {?>
                                                                 <?php echo $_smarty_tpl->tpl_vars['linha']->value->custo;?>
 
                                                             <?php } else { ?>
                                                                 -----
                                                             <?php }?>
-                                                        </th>
+                                                        </td>
                                                     <?php
 $_smarty_tpl->tpl_vars['collum'] = $__foreach_collum_6_saved_local_item;
 }
@@ -284,10 +284,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['collum']->value) {
 $_smarty_tpl->tpl_vars['collum']->_loop = true;
 $__foreach_collum_7_saved_local_item = $_smarty_tpl->tpl_vars['collum'];
 ?>
-                                                        <th>
+                                                        <td>
                                                             <?php echo (($tmp = @$_smarty_tpl->tpl_vars['collum']->value)===null||$tmp==='' ? 0 : $tmp);?>
 
-                                                        </th>
+                                                        </td>
                                                     <?php
 $_smarty_tpl->tpl_vars['collum'] = $__foreach_collum_7_saved_local_item;
 }
