@@ -37,7 +37,7 @@
                                                     <td>{$linha->des_movimentacao}</td>
                                                     <th>{$linha->movimentacao_tipo}</th>
                                                     <th>{$linha->dt_movimentacao|date_format:"%d/%m/%Y"}</th>
-                                                    <th>{$linha->custo} R$</th>
+                                                    <th>R$ {$linha->custo}</th>
                                                     <th>                   
                                                         <a href="excluir.php?id_movimentacao={$linha->id_movimentacao}">Deletar</a>
                                                     </th>

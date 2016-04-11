@@ -34,7 +34,6 @@ $month[10] = 'OUTUBRO';
 $month[11] = 'NOVEMBRO';
 $month[12] = 'DEZEMBRO';
 
-
 global $conn;
 $existente = mysql_query("SELECT * FROM movimentacao WHERE id_usuario = " . $_SESSION['usuario']['id_usuario'] . " GROUP BY des_movimentacao") or die(mysql_error());
 $i = 0;
@@ -47,6 +46,7 @@ while ($value = mysql_fetch_object($existente)) {
 
 $smarty = new Smarty();
 $smarty->assign('mes', $month);
+$smarty->assign('mesSelected', date('m'));
 $smarty->assign('tipo', $tipo);
 $smarty->assign('des_movimentacao', $des_movimentacao);
 $smarty->assign('id_movimentacao', $id_movimentacao);

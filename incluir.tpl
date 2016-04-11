@@ -49,14 +49,14 @@
                                                 <div class="form-group">
                                                     <label for="mes">Mes: </label>
                                                     <select name="mes" id="mes" class="form-control btn btn-default col-lg-3">
-                                                        {html_options options=$mes}
+                                                        {html_options selected=$mesSelected options=$mes}
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <label for="ano">Ano: </label>
-                                                    <input type="text" id="ano" name="ano" maxlength="4" class="form-control col-lg-3">
+                                                    <input type="text" id="ano" name="ano" maxlength="4" class="form-control col-lg-3" value="{$smarty.now|date_format:"%Y"}">
                                                 </div>
                                             </div>
                                             <div class="col-lg-3">

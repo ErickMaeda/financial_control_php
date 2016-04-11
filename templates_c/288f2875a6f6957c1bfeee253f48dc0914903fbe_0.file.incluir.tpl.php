@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-06 21:12:35
+/* Smarty version 3.1.29, created on 2016-04-10 20:52:49
   from "/var/www/htdocs/financial_control_php/incluir.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5705a5f36f9501_27879897',
+  'unifunc' => 'content_570ae75104c1c1_00408253',
   'file_dependency' => 
   array (
     '288f2875a6f6957c1bfeee253f48dc0914903fbe' => 
     array (
       0 => '/var/www/htdocs/financial_control_php/incluir.tpl',
-      1 => 1459987951,
+      1 => 1460332366,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,9 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:comom/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5705a5f36f9501_27879897 ($_smarty_tpl) {
+function content_570ae75104c1c1_00408253 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once '/var/www/htdocs/financial_control_php/vendor/smarty/smarty/libs/plugins/function.html_options.php';
+if (!is_callable('smarty_modifier_date_format')) require_once '/var/www/htdocs/financial_control_php/vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +84,7 @@ if (!is_callable('smarty_function_html_options')) require_once '/var/www/htdocs/
                                                 <div class="form-group">
                                                     <label for="mes">Mes: </label>
                                                     <select name="mes" id="mes" class="form-control btn btn-default col-lg-3">
-                                                        <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['mes']->value),$_smarty_tpl);?>
+                                                        <?php echo smarty_function_html_options(array('selected'=>$_smarty_tpl->tpl_vars['mesSelected']->value,'options'=>$_smarty_tpl->tpl_vars['mes']->value),$_smarty_tpl);?>
 
                                                     </select>
                                                 </div>
@@ -91,7 +92,8 @@ if (!is_callable('smarty_function_html_options')) require_once '/var/www/htdocs/
                                             <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <label for="ano">Ano: </label>
-                                                    <input type="text" id="ano" name="ano" maxlength="4" class="form-control col-lg-3">
+                                                    <input type="text" id="ano" name="ano" maxlength="4" class="form-control col-lg-3" value="<?php echo smarty_modifier_date_format(time(),"%Y");?>
+">
                                                 </div>
                                             </div>
                                             <div class="col-lg-3">
