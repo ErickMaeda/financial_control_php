@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 20:42:02
+/* Smarty version 3.1.29, created on 2016-04-11 07:34:28
   from "/var/www/htdocs/financial_control_php/excluir.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ae4ca06eb16_69422545',
+  'unifunc' => 'content_570b7db41373f7_81028964',
   'file_dependency' => 
   array (
     '9cefadc46438174034442b2fed3fc14da7f79be5' => 
     array (
       0 => '/var/www/htdocs/financial_control_php/excluir.tpl',
-      1 => 1460331720,
+      1 => 1460370864,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:comom/footer.tpl' => 1,
   ),
 ),false)) {
-function content_570ae4ca06eb16_69422545 ($_smarty_tpl) {
+function content_570b7db41373f7_81028964 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once '/var/www/htdocs/financial_control_php/vendor/smarty/smarty/libs/plugins/modifier.date_format.php';
 ?>
 <!DOCTYPE html>
@@ -80,16 +80,16 @@ $__foreach_linha_0_saved_local_item = $_smarty_tpl->tpl_vars['linha'];
 </td>
                                                     <td><?php echo $_smarty_tpl->tpl_vars['linha']->value->des_movimentacao;?>
 </td>
-                                                    <th><?php echo $_smarty_tpl->tpl_vars['linha']->value->movimentacao_tipo;?>
-</th>
-                                                    <th><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['linha']->value->dt_movimentacao,"%d/%m/%Y");?>
-</th>
-                                                    <th>R$ <?php echo $_smarty_tpl->tpl_vars['linha']->value->custo;?>
-</th>
-                                                    <th>                   
+                                                    <td><?php echo $_smarty_tpl->tpl_vars['linha']->value->movimentacao_tipo;?>
+</td>
+                                                    <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['linha']->value->dt_movimentacao,"%d/%m/%Y");?>
+</td>
+                                                    <td>R$ <?php echo $_smarty_tpl->tpl_vars['linha']->value->custo;?>
+</td>
+                                                    <td>                   
                                                         <a href="excluir.php?id_movimentacao=<?php echo $_smarty_tpl->tpl_vars['linha']->value->id_movimentacao;?>
 ">Deletar</a>
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                             <?php
 $_smarty_tpl->tpl_vars['linha'] = $__foreach_linha_0_saved_local_item;

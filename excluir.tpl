@@ -35,12 +35,12 @@
                                                 <tr>                                                                
                                                     <td>{$linha->id_movimentacao}</td>
                                                     <td>{$linha->des_movimentacao}</td>
-                                                    <th>{$linha->movimentacao_tipo}</th>
-                                                    <th>{$linha->dt_movimentacao|date_format:"%d/%m/%Y"}</th>
-                                                    <th>R$ {$linha->custo}</th>
-                                                    <th>                   
+                                                    <td>{$linha->movimentacao_tipo}</td>
+                                                    <td>{$linha->dt_movimentacao|date_format:"%d/%m/%Y"}</td>
+                                                    <td>R$ {$linha->custo}</td>
+                                                    <td>                   
                                                         <a href="excluir.php?id_movimentacao={$linha->id_movimentacao}">Deletar</a>
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                             {foreachelse}
                                                 <tr><td colspan="100%">Tabela Vazia</td></tr>
